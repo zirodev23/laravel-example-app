@@ -15,9 +15,17 @@ class PostController extends Controller
         return view('posts.index', ['allposts' => $posts]);
     }
 
-    public function show($id) {
-        $post = Post::find($id);
-        // \Log::debug($post);
+    public function show(Post $post) {
         return view('posts.show', ['singlepost' => $post]);
+    }
+
+    public function create() {
+        return view('posts.create');
+    }
+
+    public function store(Request $request) {
+        \Log::debug($request);
+        return "to be implemented";
+        // mājās izveidot jaunu Post ierakstu datubāzē
     }
 }
