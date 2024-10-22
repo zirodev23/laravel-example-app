@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>All posts</h1>
+
+    <a href="/posts/create">Create post</a>
+    
     <ul>
         @foreach($allposts as $post)
             <li>

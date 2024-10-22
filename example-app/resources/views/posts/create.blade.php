@@ -9,9 +9,16 @@
     <h1>Create post</h1>
     <form action="/posts" method="post">
         @csrf
-        Author: <input type="text" name="author">
-        Title: <input type="text" name="title">
-        Content: <textarea name="content"></textarea>
+        
+        <label for="author">Author: </label>
+        <input type="text" name="author" id="author"><br>
+
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title"><br>
+
+        <label for="content">Content: </label>
+        <textarea name="content" id="content"></textarea>
+
         <input type="submit" value="Save">
     </form>
 </body>
